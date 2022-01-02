@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">MyApp</string>
+    <string name="choose_lesson">Choose lesson</string>
+    <string name="polish_to_english">Polish to english</string>
+    <string name="english_to_polish">English to polish</string>
+    <string name="translate_following_word_to_polish">Translate_following_word_to_polish</string>
+    <string name="correct_answer">Correct!</string>
+    <string name="submit">Submit</string>
+    <string name="correct_answer_message">Keep it up!</string>
+    <string name="next">Next</string>
+    <string name="wrong_answer">Wrong!</string>
+    <string name="wrong_answer_message">Ahh unlucky. Try again!</string>
+    <string name="translate_following_word_to_english">Translate following word to english</string>
+    <string name="your_score">Your Score</string>
+    <string name="score_message_awesome">Awesome!</string>
+    <string name="score_message_good">Well done!</string>
+    <string name="score_message_bad">Next time will be better!</string>
+    <string name="exit">Exit</string>
+    <string name="start_again">Start again</string>
 </resources>
