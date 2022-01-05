@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/projekt/app/src/main/res/layout/activity_correct_answer.xml" value="0.264" />
         <entry key="..\:/projekt/app/src/main/res/layout/activity_lesson_summary.xml" value="0.171875" />
+        <entry key="..\:/projekt/app/src/main/res/layout/activity_lesson_summary2.xml" value="0.25416666666666665" />
         <entry key="..\:/projekt/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/projekt/app/src/main/res/layout/activity_question.xml" value="0.2" />
-        <entry key="..\:/projekt/app/src/main/res/layout/activity_wrong_answer2.xml" value="0.171875" />
+        <entry key="..\:/projekt/app/src/main/res/layout/activity_question.xml" value="0.264" />
+        <entry key="..\:/projekt/app/src/main/res/layout/activity_wrong_answer.xml" value="0.25416666666666665" />
+        <entry key="..\:/projekt/app/src/main/res/layout/activity_wrong_answer2.xml" value="0.264" />
       </map>
     </option>
   </component>
