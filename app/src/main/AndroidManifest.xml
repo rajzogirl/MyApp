@@ -13,14 +13,29 @@
             android:name=".LessonSummaryActivity"
             android:exported="false" />
         <activity
-            android:name=".WrongAnswerActivity2"
-            android:exported="false" />
+            android:name=".WrongAnswerActivity"
+            android:parentActivityName=".QuestionActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".QuestionActivity"/>
+        </activity>
         <activity
             android:name=".CorrectAnswerActivity"
-            android:exported="false" />
+            android:parentActivityName=".QuestionActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".QuestionActivity"/>
+        </activity>
         <activity
             android:name=".QuestionActivity"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
