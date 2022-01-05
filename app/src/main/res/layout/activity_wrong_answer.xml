@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".WrongAnswerActivity2">
+    android:contentDescription="wrong_answer_message"
+    tools:context=".WrongAnswerActivity">
 
     <TextView
         android:id="@+id/score_wrong_answer"
@@ -52,6 +53,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:background="@color/main"
+            android:onClick="onClickNext"
             android:text="@string/next"
             android:textAllCaps="false"
             android:textColor="@color/text_dark"
@@ -67,6 +69,7 @@
             android:layout_height="60dp"
             android:layout_marginStart="36dp"
             android:layout_marginTop="72dp"
+            android:contentDescription="wrong_answer_image"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/wrong_answer_img" />
