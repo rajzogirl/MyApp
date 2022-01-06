@@ -21,19 +21,19 @@ public class LessonSummaryActivity extends AppCompatActivity {
         ApplicationState appState = ApplicationState.getInstance();
         Lesson lesson = appState.getLesson();
 
-        int correctAnswerdCount = lesson.getCorrectAnswerCount();
+        int correctAnswerCount = lesson.getCorrectAnswerCount();
         int wordsCount = lesson.getWordsCount();
 
-        String score = String.format(Locale.ROOT, "%d/%d", correctAnswerdCount, wordsCount);
+        String score = String.format(Locale.ROOT, "%d/%d", correctAnswerCount, wordsCount);
         finalScoreTextView.setText(score);
 
-        float scoreFactor = correctAnswerdCount / wordsCount;
-        String scoreMessage = "";
+        float scoreFactor = (float)correctAnswerCount / (float)wordsCount;
+        String scoreMessage;
 
         if (scoreFactor> 0.7f){
             scoreMessage = getString(R.string.score_message_awesome);
         }
-        else if(scoreFactor> 0.4f){
+        else if (scoreFactor> 0.4f){
             scoreMessage = getString(R.string.score_message_good);
         }
         else {
