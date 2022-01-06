@@ -44,7 +44,8 @@ public class LessonSummaryActivity extends AppCompatActivity {
     }
     public void onClickStartAgain (View view) {
         ApplicationState appState = ApplicationState.getInstance();
-        appState.startNewLesson();
+        ApplicationState.LessonMode lessonMode = appState.getLessonMode();
+        appState.startNewLesson(lessonMode);
         Intent intent = new Intent (this, QuestionActivity.class);
         startActivity(intent);
         finish();

@@ -16,14 +16,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickPolishToEnglish(View view) {
         ApplicationState applicationState = ApplicationState.getInstance();
-        applicationState.startNewLesson();
+        applicationState.startNewLesson(ApplicationState.LessonMode.POLISH_TO_ENGLISH);
 
         Intent intent = new Intent(this, QuestionActivity.class);
         startActivity(intent);
     }
 
     public void onClickEnglishToPolish(View view) {
+        ApplicationState applicationState = ApplicationState.getInstance();
+        applicationState.startNewLesson(ApplicationState.LessonMode.ENGLISH_TO_POLISH);
 
+        Intent intent = new Intent(this, QuestionActivity.class);
+        startActivity(intent);
     }
 
 

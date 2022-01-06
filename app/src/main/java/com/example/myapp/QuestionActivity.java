@@ -30,8 +30,15 @@ public class QuestionActivity extends AppCompatActivity {
 
             String score = String.format(Locale.ROOT,"%d/%d", currentWordNumber, wordsCount);
             scoreTextView.setText(score);
+            ApplicationState.LessonMode lessonMode =  appState.getLessonMode();
 
-            String questionTitleString = getString(R.string.translate_following_word_to_english);
+            String questionTitleString = "";
+            if(lessonMode == ApplicationState.LessonMode.ENGLISH_TO_POLISH){
+                questionTitleString = getString(R.string.translate_following_word_to_polish);
+            }else if (lessonMode == ApplicationState.LessonMode.POLISH_TO_ENGLISH){
+                questionTitleString = getString(R.string.translate_following_word_to_english);
+            }
+
             questionTitle.setText(questionTitleString);
             wordToTranslate.setText(lesson.getNextWordToTranslate());
         }
