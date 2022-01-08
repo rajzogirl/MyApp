@@ -10,8 +10,16 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
+/**
+ * Displays when user provides incorrect answer.
+ */
 public class WrongAnswerActivity extends AppCompatActivity {
 
+
+    /**
+     * Displays current question number and questions count in top right corner
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +37,10 @@ public class WrongAnswerActivity extends AppCompatActivity {
         scoreTextView.setText(score);
     }
 
+    /**
+     * Navigate back to questionActivity
+     * @param view
+     */
     public void onClickNext(View view) {
         Intent intent = NavUtils.getParentActivityIntent(this);
         startActivity(intent);

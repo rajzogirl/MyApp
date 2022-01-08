@@ -8,11 +8,21 @@ import android.view.View;
 import android.widget.TextView;
 import java.util.Locale;
 
+/**
+ * Activity which displays question to translate and provides text input for user
+ * to enter translated word.
+ * Also provides Submit button to check if answer was correct.
+ */
 public class QuestionActivity extends AppCompatActivity {
     TextView scoreTextView = null;
     TextView questionTitle = null;
     TextView wordToTranslate = null;
 
+    /**
+     * Display word to translate if lesson is not over.
+     * If is over, then navigate to LessonSummaryActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +58,14 @@ public class QuestionActivity extends AppCompatActivity {
             finish();
         }
     }
+
+    /**
+     * Function called when submit button is clicked.
+     * Check if answer provided in user_input is correct
+     * If so, navigate to CorrectAnswerActivity
+     * If not, navigate to WrongAnswerActivity
+     * @param view
+     */
     public void onClickSubmit(View view) {
         ApplicationState appState = ApplicationState.getInstance();
         Lesson lesson = appState.getLesson();

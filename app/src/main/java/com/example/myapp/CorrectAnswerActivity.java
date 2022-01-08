@@ -10,12 +10,20 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
+/**
+ * Activity displayed when user provided correct answer.
+ */
 public class CorrectAnswerActivity extends AppCompatActivity {
 
+    /**
+     * Displays current question number and questions count in top right corner
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_correct_answer);
+
         TextView scoreTextView = findViewById(R.id.score_correct_message);
 
         ApplicationState appState = ApplicationState.getInstance();
@@ -29,6 +37,10 @@ public class CorrectAnswerActivity extends AppCompatActivity {
         scoreTextView.setText(score);
     }
 
+    /**
+     * Navigate back to questionActivity
+     * @param view
+     */
     public void onClickNext(View view) {
         Intent intent = NavUtils.getParentActivityIntent(this);
         startActivity(intent);

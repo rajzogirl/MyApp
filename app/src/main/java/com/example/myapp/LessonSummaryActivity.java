@@ -9,8 +9,17 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
+/**
+ * Activity displayed at the end of the lesson
+ * Displays score, "motivational quote" based on score and provides
+ * ability to start lesson in the same mode as previous or navigate to MainActivity.
+ */
 public class LessonSummaryActivity extends AppCompatActivity {
 
+    /**
+     * This lesson displays user score and "motivational quote" based on that score
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +51,12 @@ public class LessonSummaryActivity extends AppCompatActivity {
 
         scoreMessageTextView.setText(scoreMessage);
     }
+
+    /**
+     * Function called when start Again button is clicked
+     * It starts new lesson with the same mode as previous and navigates to QuestionActivity
+     * @param view
+     */
     public void onClickStartAgain (View view) {
         ApplicationState appState = ApplicationState.getInstance();
         ApplicationState.LessonMode lessonMode = appState.getLessonMode();
@@ -51,6 +66,12 @@ public class LessonSummaryActivity extends AppCompatActivity {
         finish();
 
     }
+
+    /**
+     * Function call when Exit button is clicked
+     * Navigates to MainActivity
+     * @param view
+     */
     public void onClickExit (View view) {
         Intent intent = new Intent (this, MainActivity.class);
         startActivity(intent);
