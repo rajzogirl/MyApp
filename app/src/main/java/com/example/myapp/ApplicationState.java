@@ -3,7 +3,7 @@ package com.example.myapp;
 import java.util.HashMap;
 
 /**
- * Class with constains main, global state of application used to store current lesson object.
+ * Class with contains main, global state of application used to store current lesson object.
  * Every Activity has equal access to this class and it is data.
  * Implemented as a Singleton design pattern.
  */
@@ -140,8 +140,8 @@ public class ApplicationState {
      */
         public static ApplicationState getInstance() {
             if (instance == null){
-            instance = new ApplicationState();
-        }
+                instance = new ApplicationState();
+            }
             return instance;
         }
 
@@ -152,11 +152,11 @@ public class ApplicationState {
         public void startNewLesson(LessonMode lessonMode){
             this.lessonMode = lessonMode;
             TranslationMapRandomizer randomizer = new TranslationMapRandomizer();
-                    if (lessonMode == LessonMode.POLISH_TO_ENGLISH){
-                        lesson = new Lesson(randomizer.randomize(polishToEnglishTranslationMap, QUESTIONS_COUNT));
-                    }else if (lessonMode == LessonMode.ENGLISH_TO_POLISH){
-                        lesson = new Lesson(randomizer.randomize(englishToPolishTranslationMap, QUESTIONS_COUNT));
-                    }
+            if (lessonMode == LessonMode.POLISH_TO_ENGLISH){
+                lesson = new Lesson(randomizer.randomize(polishToEnglishTranslationMap, QUESTIONS_COUNT));
+            }else if (lessonMode == LessonMode.ENGLISH_TO_POLISH){
+                lesson = new Lesson(randomizer.randomize(englishToPolishTranslationMap, QUESTIONS_COUNT));
+            }
         }
 
         public Lesson getLesson() {
